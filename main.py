@@ -8,9 +8,9 @@ import datetime
 YEAR = 2025
 MONTH = 5      # 1-12 (January = 1, December = 12)
 DAY = 4        # 1-31 (day of the month)
-HOUR = 14      # 0-23 (24-hour format, 2:00 PM = 14)
-MINUTE = 30    # 0-59
-SECOND = 0     # 0-59
+HOUR = 17      # 0-23 (24-hour format, 2:00 PM = 14)
+MINUTE = 20    # 0-59
+SECOND = 30     # 0-59
 MILLISECOND = 0  # 0-999 (1/1000th of a second precision)
 
 # Set the screen coordinates for the click

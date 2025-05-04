@@ -14,8 +14,8 @@ SECOND = 30     # 0-59
 MILLISECOND = 0  # 0-999 (1/1000th of a second precision)
 
 # Set the screen coordinates for the click
-CLICK_X = 500  # X-coordinate on screen
-CLICK_Y = 300  # Y-coordinate on screen
+CLICK_X = 1436  # X-coordinate on screen
+CLICK_Y = 13017  # Y-coordinate on screen
 # =========================
 
 def main():

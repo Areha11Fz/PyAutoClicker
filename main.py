@@ -8,14 +8,18 @@ import datetime
 YEAR = 2025
 MONTH = 5      # 1-12 (January = 1, December = 12)
 DAY = 4        # 1-31 (day of the month)
-HOUR = 19      # 0-23 (24-hour format, 2:00 PM = 14)
+HOUR = 22      # 0-23 (24-hour format, 2:00 PM = 14)
 MINUTE = 59    # 0-59
 SECOND = 59     # 0-59
-MILLISECOND = 0  # 0-999 (1/1000th of a second precision)
+MILLISECOND = 750  # 0-999 (1/1000th of a second precision)
 
-# Set the screen coordinates for the click
-CLICK_X = 1436  # X-coordinate on screen
-CLICK_Y = 1317  # Y-coordinate on screen
+# Set the screen coordinates for the INITIAL click
+INITIAL_CLICK_X = 1433
+INITIAL_CLICK_Y = 125
+
+# Set the screen coordinates for the subsequent SPAM click
+SPAM_CLICK_X = 1436
+SPAM_CLICK_Y = 1317
 # =========================
 
 def main():
@@ -38,21 +42,26 @@ def main():
     if delay > 0:
         print(f"Waiting for {delay:.2f} seconds (about {delay/60:.2f} minutes)...")
         time.sleep(delay)
-        print("Performing spam click now!")
         
-        # Spam click for 5 seconds
+        # # Perform initial single click
+        # print(f"Performing initial click at ({INITIAL_CLICK_X}, {INITIAL_CLICK_Y})...")
+        # pyautogui.click(x=INITIAL_CLICK_X, y=INITIAL_CLICK_Y)
+        # print("Initial click done.")
+        
+        # Perform spam click for 5 seconds at the second location
+        print(f"Performing spam click at ({SPAM_CLICK_X}, {SPAM_CLICK_Y}) for 5 seconds...")
         start_time = time.time()
         duration = 5  # seconds
         clicks = 0
         while time.time() < start_time + duration:
-            pyautogui.click(x=CLICK_X, y=CLICK_Y)
+            pyautogui.click(x=SPAM_CLICK_X, y=SPAM_CLICK_Y)
             clicks += 1
-            # Optional: Add a very small delay if needed to avoid overwhelming the system, 
+            # Optional: Add a very small delay if needed to avoid overwhelming the system,
             # but for spam clicking, usually no delay is desired.
-            # time.sleep(0.01) 
+            # time.sleep(0.01)
             
         print(f"Spam clicking finished after {duration} seconds.")
-        print(f"Performed approximately {clicks} clicks at coordinates ({CLICK_X}, {CLICK_Y})")
+        print(f"Performed approximately {clicks} clicks at coordinates ({SPAM_CLICK_X}, {SPAM_CLICK_Y})")
     else:
         print("The target time is in the past. Please set a future time.")
 

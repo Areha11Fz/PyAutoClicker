@@ -6,20 +6,23 @@ import datetime
 # =========================
 # Set the target date and time for when the click should happen
 YEAR = 2025
-MONTH = 5      # 1-12 (January = 1, December = 12)
-DAY = 4        # 1-31 (day of the month)
-HOUR = 22      # 0-23 (24-hour format, 2:00 PM = 14)
+MONTH = 7      # 1-12 (January = 1, December = 12)
+DAY = 24        # 1-31 (day of the month)
+HOUR = 23      # 0-23 (24-hour format, 2:00 PM = 14)
 MINUTE = 59    # 0-59
 SECOND = 59     # 0-59
-MILLISECOND = 750  # 0-999 (1/1000th of a second precision)
+MILLISECOND = 800  # 0-999 (1/1000th of a second precision)
 
 # Set the screen coordinates for the INITIAL click
 INITIAL_CLICK_X = 1433
 INITIAL_CLICK_Y = 125
 
+# INITIAL_CLICK_X = 960
+# INITIAL_CLICK_Y = 342
+
 # Set the screen coordinates for the subsequent SPAM click
-SPAM_CLICK_X = 1436
-SPAM_CLICK_Y = 1317
+SPAM_CLICK_X = 2117
+SPAM_CLICK_Y = 1986
 # =========================
 
 def main():

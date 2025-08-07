@@ -6,16 +6,16 @@ import datetime
 # =========================
 # Set the target date and time for when the click should happen
 YEAR = 2025
-MONTH = 7      # 1-12 (January = 1, December = 12)
-DAY = 25        # 1-31 (day of the month)
-HOUR = 20      # 0-23 (24-hour format, 2:00 PM = 14)
-MINUTE = 0    # 0-59
-SECOND = 0     # 0-59
-MILLISECOND = 0  # 0-999 (1/1000th of a second precision)
+MONTH = 8      # 1-12 (January = 1, December = 12)
+DAY = 8        # 1-31 (day of the month)
+HOUR = 0      # 0-23 (24-hour format, 2:00 PM = 14)
+MINUTE = 49    # 0-59
+SECOND = 59     # 0-59
+MILLISECOND = 800  # 0-999 (1/1000th of a second precision)
 
 # Set the screen coordinates for the INITIAL click
-INITIAL_CLICK_X = 1433
-INITIAL_CLICK_Y = 125
+INITIAL_CLICK_X = 1422
+INITIAL_CLICK_Y = 345
 
 # INITIAL_CLICK_X = 960
 # INITIAL_CLICK_Y = 342
